@@ -27,7 +27,7 @@ module.exports = (app, options = {}) => {
     app.locals.Prometheus = Prometheus
 
     if (includeDefault) {
-        // Prometheus.collectDefaultMetrics()
+        Prometheus.collectDefaultMetrics()
     }
 
     const requestDuration = requestDurationGenerator(requestDurationBuckets)
